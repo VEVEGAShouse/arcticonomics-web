@@ -128,6 +128,11 @@ body.is-dark .bar { color: var(--snow); }
 .proof__ev .mono { margin: 0 0 10px; color: var(--amber); }
 .proof__ev.is-f .mono { color: #6cc6ff; }
 .proof__t { margin: 0; font-family: var(--disp); font-stretch: 82%; font-variation-settings: "wdth" 82; font-weight: 800; font-size: clamp(26px, 3.2vw, 54px); line-height: 1.02; }
+.proof__p { margin: 12px 0 0; font-family: var(--disp); font-stretch: 72%; font-variation-settings: "wdth" 72; font-weight: 900; font-size: clamp(30px, 3.6vw, 60px); line-height: 1; color: var(--mute-d); font-variant-numeric: tabular-nums; }
+.proof__p b { color: var(--amber); font-weight: 900; }
+.proof__ev.is-f .proof__p b { color: #6cc6ff; }
+.proof__p i { font-style: normal; color: var(--snow); }
+.proof__p span { display: block; margin-top: 8px; font-family: var(--mono); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; font-weight: 500; color: var(--mute-d); }
 .proof__ev.pop > * { animation: pop .7s var(--ease) both; }
 @keyframes pop { from { opacity: 0; transform: translateY(14px); } }
 
@@ -188,7 +193,8 @@ body.is-dark .bar { color: var(--snow); }
   .bar2__track { height: 54px; }
   .proof__y { top: 86px; font-size: 54px; }
   .proof__ev { left: var(--pad); right: var(--pad); top: auto; bottom: 46px; max-width: none; text-align: left; }
-  .proof__t { font-size: 26px; }
+  .proof__t { font-size: 24px; }
+  .proof__p { font-size: 30px; margin-top: 6px; }
   .pick__o { min-width: 0; width: 100%; }
   .exc span { display: block; margin: 4px 0 0; font-size: .5em; }
 }
