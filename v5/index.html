@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Arcticonomics — A lens on the Arctic, the world and the Nordics</title>
+  <meta name="description" content="Arcticonomics is a lens: the Arctic economy runs counter-cyclical to the world economy. When the world economy breaks down, the Arctic thrives. Norway, Greenland and the great Nordic paradox. A FRONTTIER theory by Virginia E. Vegas.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#eceff1">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=Inter+Tight:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=2">
+</head>
+<body class="united">
+  <header class="bar">
+    <a href="#top" class="bar__b">ARCTICONOMICS</a>
+    <button type="button" class="sw" id="sw" role="switch" aria-checked="false" aria-label="State of the world">
+      <span class="sw__l mono">The world</span>
+      <span class="sw__t"><span class="sw__o mono">United</span><span class="sw__o mono">Broken</span><i></i></span>
+    </button>
+    <a class="bar__f mono" href="https://fronttier.io">FRONTTIER ↗</a>
+  </header>
+  <div class="toast mono" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- 0. the lens -->
+  <section class="hero" id="top">
+    <p class="mono k">A FRONTTIER theory · by Virginia E. Vegas</p>
+    <h1 class="hero__t">Arcticonomics</h1>
+    <div class="hero__g">
+      <p class="hero__s">A lens to understand the <b>Arctic</b> in the world economy, and through it, the <b>Nordics</b>.</p>
+      <div class="lens" aria-hidden="true">
+        <div class="lens__ring"><span class="lens__w w-u">The world is united.<br>The Arctic is worth <b>nothing.</b></span><span class="lens__w w-b">The world is broken.<br>The Arctic is worth <b>everything.</b></span></div>
+      </div>
+    </div>
+    <p class="mono hero__h">Use the switch at the top. It changes the whole page. ↑</p>
+  </section>
+
+  <!-- I. economics -->
+  <section class="sec" id="eco" aria-labelledby="ecoT">
+    <div class="wrap">
+      <p class="mono k">I — First, what is economics?</p>
+      <h2 class="h2" id="ecoT">The system that decides who lives in a <u>mansion</u> and who ends up <u>homeless</u>.</h2>
+      <p class="lead">It uses money to set the value of things and to decide who gets what. And value is never fixed. It depends on three things. Play with them.</p>
+      <div class="val">
+        <div class="val__ctl">
+          <label class="sl"><span class="mono">1 · How much of it exists</span><input type="range" id="vS" min="0" max="100" value="80"><span class="sl__e mono"><span>Scarce</span><span>Infinite</span></span></label>
+          <label class="sl"><span class="mono">2 · How many people want it</span><input type="range" id="vW" min="0" max="100" value="60"><span class="sl__e mono"><span>Nobody</span><span>Everyone</span></span></label>
+          <label class="sl"><span class="mono">3 · How much they can pay</span><input type="range" id="vM" min="0" max="100" value="50"><span class="sl__e mono"><span>Nothing</span><span>A fortune</span></span></label>
+          <div class="chips mono" id="vP" role="group" aria-label="Examples"></div>
+        </div>
+        <div class="val__out">
+          <p class="mono">Its value</p>
+          <p class="val__v" id="vV">$40</p>
+          <p class="val__l" id="vL">Plenty of it. Some want it.</p>
+          <div class="val__bar"><i id="vB"></i></div>
+        </div>
+      </div>
+      <p class="note">Infinite and unwanted: free. Limited and needed by everyone: its price rises as high as people can pay. That is <b>World Economics</b>.</p>
+    </div>
+  </section>
+
+  <!-- II. the law -->
+  <section class="sec sec--alt" id="law" aria-labelledby="lawT">
+    <div class="wrap">
+      <p class="mono k">II — The law of Arcticonomics</p>
+      <h2 class="h2" id="lawT">The Arctic runs <u>counter&#8209;cyclical</u> to the world.</h2>
+      <p class="lead">Arcticonomics is part of World Economics, but it moves in the opposite direction. Same Arctic. Different world.</p>
+      <div class="saw" id="saw">
+        <svg viewBox="0 0 1000 300" class="saw__svg" aria-hidden="true">
+          <g class="saw__beam"><rect x="60" y="130" width="880" height="22" /><rect class="saw__wl" x="60" y="40" width="190" height="90" /><rect class="saw__wr" x="750" y="40" width="190" height="90" />
+            <text x="155" y="94" class="saw__tl">WORLD</text><text x="845" y="94" class="saw__tr">ARCTIC</text></g>
+          <polygon points="500,152 450,270 550,270" class="saw__piv" />
+          <rect x="380" y="270" width="240" height="14" class="saw__piv" />
+        </svg>
+        <div class="saw__cols">
+          <div class="saw__c">
+            <p class="mono saw__k">World economy</p>
+            <p class="saw__v w-u">Integrated</p><p class="saw__v w-b">Fragmented</p>
+            <ul class="w-u"><li>Everyone trusts each other</li><li>Trade flows freely across borders</li><li>The cheapest, most competitive wins</li><li>Any shortage finds a substitute</li></ul>
+            <ul class="w-b"><li>Mistrust replaces trust</li><li>Blockades, sanctions, war</li><li>Supply you relied on disappears</li><li>People pay whatever it takes</li></ul>
+          </div>
+          <div class="saw__c">
+            <p class="mono saw__k">Arctic economy</p>
+            <p class="saw__v w-u">Worthless</p><p class="saw__v w-b">Vital</p>
+            <ul class="w-u"><li>Far away</li><li>Cold, hard to reach</li><li>The highest operating costs on Earth</li><li>The same resources exist elsewhere, closer and cheaper</li></ul>
+            <ul class="w-b"><li>One of the few trusted sources left</li><li>Worth going to the most extreme place on Earth</li><li>Its cost no longer matters</li><li>The last frontier</li></ul>
+          </div>
+        </div>
+        <button type="button" class="big" id="breakBtn"><span class="w-u">Break the world ⚡</span><span class="w-b">Unite the world ☮</span></button>
+      </div>
+      <p class="law__q"><span class="w-u">In a united world, the Arctic has little to offer.</span><span class="w-b">When the world economy breaks down, the Arctic economy thrives.</span></p>
+    </div>
+  </section>
+
+  <!-- III. case 1: norway -->
+  <section class="sec case" id="norway" aria-labelledby="norT">
+    <div class="wrap">
+      <p class="mono k case__k">Case study 01 — Norway</p>
+      <h2 class="h2 h2--xl" id="norT">An <u>oil</u> nation. A <u>peace</u> nation.</h2>
+      <div class="facts">
+        <div class="fact"><b>2,000 m</b><span>below the North Sea and the Barents Sea</span></div>
+        <div class="fact"><b>Freezing</b><span>water, costly platforms, advanced technology</span></div>
+        <div class="fact"><b>High pay</b><span>for the people who get it out</span></div>
+      </div>
+
+      <div class="lab">
+        <div class="lab__ctl">
+          <div class="lab__p"><span class="mono">Price of a barrel</span><output id="pV">$20</output></div>
+          <input type="range" id="price" min="10" max="210" value="20" aria-label="Oil price per barrel">
+          <p class="mono lab__h">Moves with the world switch. Or drag it.</p>
+        </div>
+        <div class="lab__out">
+          <div class="pb"><span class="mono pb__n">Saudi barrel · costs ≈ $2</span><div class="pb__bar"><i id="bS"></i></div><b id="oS">+$18</b></div>
+          <div class="pb pb--no"><span class="mono pb__n">Norwegian barrel · costs ≈ $30</span><div class="pb__bar"><i id="bN"></i></div><b id="oN">−$10</b></div>
+          <p class="verdict" id="verdict">Norway is outcompeted. Its oil industry collapses.</p>
+        </div>
+      </div>
+
+      <div class="proof">
+        <div class="proof__top">
+          <h3 class="h3">The data. Every spike is a producer falling into chaos. Every crash, a world pumping freely.</h3>
+          <div class="ctl mono">
+            <button type="button" class="play" id="play"><span id="playI">▶</span> <span id="playL">Play 80 years</span></button>
+          </div>
+        </div>
+        <div class="chart">
+          <canvas id="chart" aria-label="Real oil price 1947 to 2026 with the wars, revolutions and sanctions that moved it"></canvas>
+          <div class="card" id="card" hidden>
+            <p class="mono card__k" id="cK"></p>
+            <p class="card__t" id="cT"></p>
+            <p class="card__n" id="cN"></p>
+            <button type="button" class="mono card__x" id="cX">All 80 years ✕</button>
+          </div>
+        </div>
+        <div class="chips mono" id="chips" role="group" aria-label="Events"></div>
+        <p class="legend mono"><span><i class="sq sq--a"></i>Norway earns: price above $30</span><span><i class="dot dot--a"></i>The world breaks</span><span><i class="dot dot--f"></i>The world flows</span><span>Real WTI, Oct 2026 dollars</span></p>
+      </div>
+
+      <div class="punch">
+        <p class="punch__v" data-count="2.3" data-pre="$" data-suf="tn">$2.3tn</p>
+        <p class="punch__t">Norway’s oil fund. One of the world’s most generous welfare states. Built, in part, on war, collapse and sanctions elsewhere. <b>A global symbol of peace that profits from conflict.</b></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- IV. case 2: greenland -->
+  <section class="sec sec--alt case" id="greenland" aria-labelledby="glT">
+    <div class="wrap">
+      <p class="mono k case__k">Case study 02 — Greenland</p>
+      <h2 class="h2" id="glT">Greenland has not changed. The <u>world</u> around it has.</h2>
+      <div class="gl">
+        <div class="gl__card">
+          <p class="mono">Greenland · constant</p>
+          <div class="crust" id="crust">
+            <p class="mono crust__k">Age of the crust</p>
+            <div class="cr"><span class="mono">Greenland · cratons</span><div class="cr__b"><i style="--w:1"></i></div><b>4,000,000,000 yrs</b></div>
+            <div class="cr"><span class="mono">Southern Europe</span><div class="cr__b"><i style="--w:.05"></i></div><b>200,000,000</b></div>
+            <div class="cr"><span class="mono">Iceland</span><div class="cr__b"><i style="--w:.00625"></i></div><b>25,000,000</b></div>
+          </div>
+          <div class="gl__nums">
+            <div><b>≈ $2tn</b><span>known resources, by a rough FRONTTIER estimate. Most of the island is unexplored.</span></div>
+            <div><b>80%</b><span>under permanent ice. Far away, harsh, little infrastructure, tiny population.</span></div>
+          </div>
+        </div>
+        <div class="gl__world">
+          <p class="mono">The world around it · <span class="w-u">united</span><span class="w-b">broken</span></p>
+          <p class="gl__big w-u">Too far. Too cold. Too costly.</p>
+          <p class="gl__big w-b">A strategic partner, whatever the cost.</p>
+          <p class="gl__p w-u">When the world is peaceful, stable and united, Greenland is one of the hardest and most expensive places on Earth to do business. Its minerals can wait.</p>
+          <p class="gl__p w-b">More divided. More autocratic. Less globalist, more nationalist. Less trust between nations. Pure, untouched, strategically critical resources suddenly matter to everyone.</p>
+          <p class="mono gl__h">Flip the world. Greenland stays the same.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- V. the paradox -->
+  <section class="sec dark" id="paradox" aria-labelledby="parT">
+    <div class="wrap">
+      <p class="mono k">V — The great Nordic paradox</p>
+      <h2 class="h2" id="parT">The Nordic <u>impossible</u> dilemma.</h2>
+      <p class="lead">Five Arctic nations. The values they champion most are at odds with where their wealth comes from. Try to have both.</p>
+      <div class="dil">
+        <button type="button" class="dil__o" id="dPeace" aria-pressed="false"><span class="mono">Goal A</span><b>Lasting global peace</b><i></i></button>
+        <button type="button" class="dil__o" id="dWealth" aria-pressed="true"><span class="mono">Goal B</span><b>A wealthy Nordic region</b><i></i></button>
+      </div>
+      <p class="dil__r" id="dilR">Today: a wealthy Nordic region, in a world at war.</p>
+      <div class="ex">
+        <div class="ex__c"><p class="mono">Norway · oil</p><p>Peace brings Venezuela, Iran and Russia back to the market. Their cheap oil floods the world and the price collapses.</p></div>
+        <div class="ex__c"><p class="mono">Sweden · defence</p><p>A world that settles conflicts through dialogue does not buy weapons. A cornerstone of Swedish industry disappears.</p></div>
+      </div>
+      <h3 class="h3 h3--m">They cannot compete on price. They win only when they are the <u>exception</u>, not the rule.</h3>
+      <div class="flips">
+        <button type="button" class="flip"><span class="flip__f">Democratic</span><span class="flip__b">in a world that turns <b>autocratic</b></span></button>
+        <button type="button" class="flip"><span class="flip__f">Stable</span><span class="flip__b">in a world that turns <b>chaotic</b></span></button>
+        <button type="button" class="flip"><span class="flip__f">United</span><span class="flip__b">in a world that turns <b>fragmented</b></span></button>
+      </div>
+      <p class="quote">The Nordics move forward when the rest of the world moves backward.</p>
+    </div>
+  </section>
+
+  <!-- VI. credibility -->
+  <section class="sec" id="cred" aria-labelledby="credT">
+    <div class="wrap">
+      <p class="mono k">VI — The real risk</p>
+      <h2 class="h2" id="credT">Not a scandal. A <u>credibility</u> crisis.</h2>
+      <p class="lead">Every country protects its own interests. That is normal. The problem is the brand: the Nordics made peace, democracy, freedom, equality and human rights their shared identity, and became the world’s <b>moral superpowers</b>.</p>
+      <ol class="chain" id="chain">
+        <li><span class="mono">01</span><b>Say ≠ Do</b><em>The gap between what they preach and what they do widens</em></li>
+        <li><span class="mono">02</span><b>Confusion</b><em>The world begins to notice</em></li>
+        <li><span class="mono">03</span><b>Mistrust</b><em>Confusion turns into doubt</em></li>
+        <li class="chain__x"><span class="mono">04</span><b>Credibility lost</b><em>Their greatest asset, and the foundation of their prosperity</em></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- VII. rethink -->
+  <section class="end" id="rethink" aria-labelledby="endT">
+    <div class="wrap">
+      <p class="mono k">VII — Time to rethink the idea of the Nordics</p>
+      <div class="end__g">
+        <div>
+          <h2 class="end__t" id="endT">The problem is not economic. It is the <u>story</u>.</h2>
+          <p class="end__p">The answer is not to bend the economy to fit the story, but to write a new story that fits the economy. Don Quijote refused to accept that the world had moved on, and fought windmills. The mistake is not in dreaming. It is in refusing to let the dream evolve.</p>
+        </div>
+        <svg class="mill" viewBox="0 0 200 260" aria-hidden="true"><g class="mill__s"><rect x="94" y="-6" width="12" height="96" /><rect x="94" y="110" width="12" height="96" /><rect x="-6" y="94" width="96" height="12" /><rect x="110" y="94" width="96" height="12" /></g><polygon points="70,120 130,120 150,258 50,258" class="mill__b" /><circle cx="100" cy="100" r="12" class="mill__h" /></svg>
+      </div>
+      <ul class="qs">
+        <li>What does it mean to be Nordic in the 21st century?</li>
+        <li>What is our role in this new world?</li>
+        <li>What new ideas can we genuinely stand for?</li>
+      </ul>
+      <p class="end__c">Not to give up on the Nordic dream. To have the courage to dream a new one.</p>
+      <div class="end__ctas">
+        <a class="btn btn--ink" href="mailto:admin@fronttier.io?subject=Arcticonomics">Bring Arcticonomics to your room →</a>
+        <a class="btn" href="https://fronttier.io">Explore FRONTTIER ↗</a>
+      </div>
+    </div>
+    <footer class="foot mono">
+      <span>Arcticonomics · first presented at Arctic Circle 2025 by Virginia E. Vegas</span>
+      <span>Oil data: FRED, WTI spot (WTISPLC), deflated by US CPI-U to Oct 2026 dollars</span>
+      <a href="https://fronttier.io">A FRONTTIER AS project ↗</a>
+    </footer>
+  </section>
+
+  <script src="../data.js?v=1"></script>
+  <script src="app.js?v=2" defer></script>
+</body>
+</html>
