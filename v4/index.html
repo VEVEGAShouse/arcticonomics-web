@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Arcticonomics — When the world breaks, the Arctic wins</title>
+  <meta name="description" content="Arcticonomics: the Arctic economy is counter-cyclical to the world. Eighty years of the real oil price show it: every spike is a war, a revolution or a sanction. A FRONTTIER theory by Virginia E. Vegas.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#0a0c0e">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=Inter+Tight:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=2">
+</head>
+<body>
+  <header class="bar">
+    <a href="#top" class="bar__b">ARCTICONOMICS</a>
+    <a class="bar__m mono" href="https://fronttier.io">A FRONTTIER theory ↗</a>
+    <a href="mailto:admin@fronttier.io?subject=Arcticonomics" class="bar__c mono">Talk to us</a>
+  </header>
+
+  <!-- 0. hero -->
+  <section class="hero" id="top">
+    <h1 class="hero__t"><span class="ln"><span>When the world</span></span><span class="ln"><span>breaks, the</span></span><span class="ln"><span><b>Arctic wins.</b></span></span></h1>
+    <div class="hero__chart">
+      <canvas id="bars" aria-label="Average real oil price for every year from 1947 to 2026"></canvas>
+      <p class="mono hero__tip" id="tip">Every bar is one year of oil. Touch one.</p>
+    </div>
+    <div class="hero__foot mono">
+      <span>80 years of oil · 1947 — 2026</span>
+      <span><i class="sq sq--a"></i>A year the world broke</span>
+      <a href="#law">Read the theory ↓</a>
+    </div>
+  </section>
+
+  <div class="ticker" aria-hidden="true"><div class="ticker__t" id="ticker"></div></div>
+
+  <!-- 1. the law -->
+  <section class="law snow" id="law" aria-labelledby="lawT">
+    <div class="wrap">
+      <p class="k mono">01 — The law</p>
+      <h2 class="h2" id="lawT">The Arctic economy runs <u>counter&#8209;cyclical</u> to the world.</h2>
+      <p class="lead">In a world of trust and free trade, the cheapest barrel wins. The Arctic is cold, remote and costly, so nobody needs it. When the world breaks, it becomes vital, whatever the cost. <b>Move the world and see.</b></p>
+
+      <div class="lab">
+        <div class="lab__ctl">
+          <div class="lab__p"><span class="mono">Oil price</span><output id="pV">$20</output></div>
+          <input type="range" id="price" min="10" max="140" value="20" step="1" aria-label="Oil price per barrel">
+          <div class="lab__ends mono"><span>☮ World at peace</span><span>World breaks ⚡</span></div>
+          <div class="presets mono" id="presets" role="group" aria-label="Moments in history"></div>
+        </div>
+        <div class="lab__out">
+          <div class="pb"><span class="mono pb__n">Saudi barrel · costs $2</span><div class="pb__bar"><i id="bS"></i></div><b id="vS">+$18</b></div>
+          <div class="pb pb--no"><span class="mono pb__n">Norwegian barrel · costs $30</span><div class="pb__bar"><i id="bN"></i></div><b id="vN">−$10</b></div>
+          <p class="verdict" id="verdict">Nobody needs the Arctic.</p>
+        </div>
+      </div>
+      <p class="fine mono">Production costs as presented at Arctic Circle 2025. Presets use real 2026 dollars.</p>
+    </div>
+  </section>
+
+  <!-- 2. the proof -->
+  <section class="proof ink" id="proof" aria-labelledby="proofT">
+    <div class="wrap">
+      <div class="proof__top">
+        <div>
+          <p class="k mono">02 — The proof</p>
+          <h2 class="h2" id="proofT">Eighty years. Every spike is a war.</h2>
+        </div>
+        <div class="ctl mono">
+          <button type="button" class="play" id="play"><span id="playI">▶</span> <span id="playL">Play history</span></button>
+          <div class="seg" role="group" aria-label="Price view"><button type="button" data-v="real" aria-pressed="true">Real $</button><button type="button" data-v="nominal" aria-pressed="false">Nominal $</button></div>
+        </div>
+      </div>
+    </div>
+    <div class="chart">
+      <canvas id="chart" aria-label="Oil price 1947 to 2026 with the wars, revolutions and sanctions that moved it"></canvas>
+      <div class="card" id="card" hidden>
+        <p class="mono card__k" id="cK"></p>
+        <p class="card__t" id="cT"></p>
+        <p class="card__n" id="cN"></p>
+        <button type="button" class="mono card__x" id="cX">All 80 years ✕</button>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="chips mono" id="chips" role="group" aria-label="Events"></div>
+      <div class="legend mono"><span><i class="sq sq--a"></i>Norway earns: price above $30</span><span><i class="sq sq--g"></i>Price below Norway’s cost</span><span><i class="dot dot--a"></i>World breaks</span><span><i class="dot dot--f"></i>World flows</span></div>
+    </div>
+  </section>
+
+  <!-- 3. scoreboard -->
+  <section class="score snow" aria-labelledby="scoreT">
+    <div class="wrap">
+      <p class="k mono">03 — The scoreboard</p>
+      <h2 class="h2" id="scoreT">What each crisis did to the price of oil.</h2>
+      <div class="seg seg--dk mono" role="group" aria-label="Measure"><button type="button" data-m="pct" aria-pressed="true">Price jump %</button><button type="button" data-m="nok" aria-pressed="false">Norway’s margin per barrel</button></div>
+      <ol class="rank" id="rank"></ol>
+      <p class="fine mono">Real WTI, lowest price in the four months before each event against the highest in the year after.</p>
+    </div>
+  </section>
+
+  <!-- 4. norway -->
+  <section class="nor ink" aria-labelledby="norT">
+    <div class="wrap">
+      <p class="k mono">04 — Norway</p>
+      <h2 class="h2 h2--xl" id="norT">The country of the <u>Nobel Peace Prize</u> grows richer when peace fails.</h2>
+      <div class="blocks">
+        <div class="blk blk--a"><p class="blk__v" data-count="2.3" data-pre="$" data-suf="tn">$2.3tn</p><p class="mono">Norway’s oil fund, June 2026</p></div>
+        <div class="blk"><p class="blk__v" data-count="55" data-pre="+" data-suf="%">+55%</p><p class="mono">Oil, February → April 2026, after the war on Iran began</p></div>
+        <div class="blk"><p class="blk__v" data-count="15" data-pre="" data-suf="×">15×</p><p class="mono">What a Norwegian barrel costs, against a Saudi one</p></div>
+      </div>
+      <p class="lead lead--ink">Every time a major producer falls into war, revolution or sanctions, Norwegian oil becomes one of the few trusted sources left. Every time all producers pump freely, prices collapse. Norway’s welfare state rests, in part, on other people’s chaos.</p>
+    </div>
+  </section>
+
+  <!-- 5. greenland -->
+  <section class="gl snow" aria-labelledby="glT">
+    <div class="wrap">
+      <p class="k mono">05 — Greenland</p>
+      <h2 class="h2" id="glT">Greenland has not changed. The world around it has.</h2>
+      <div class="gl__g">
+        <div class="crust" id="crust">
+          <p class="mono crust__k">Age of the crust</p>
+          <div class="cr"><span class="mono">Greenland</span><div class="cr__b"><i style="--w:1"></i></div><b>4,000,000,000 yrs</b></div>
+          <div class="cr"><span class="mono">Southern Europe</span><div class="cr__b"><i style="--w:.05"></i></div><b>200,000,000</b></div>
+          <div class="cr"><span class="mono">Iceland</span><div class="cr__b"><i style="--w:.00625"></i></div><b>25,000,000</b></div>
+          <p class="fine mono">Cratons this old keep their minerals pure and concentrated.</p>
+        </div>
+        <div class="ice">
+          <div class="ice__g" id="iceG" aria-label="80 of 100 squares are ice"></div>
+          <p class="ice__v"><b>80%</b> under ice</p>
+          <p class="ice__v ice__v--s"><b>$1.8tn</b> in known resources, mostly unexplored</p>
+        </div>
+      </div>
+      <p class="lead">At October 2025 prices, by a rough FRONTTIER estimate. In a calm world, Greenland is too far and too costly. In a divided one, every power wants it as a partner.</p>
+    </div>
+  </section>
+
+  <!-- 6. nordic paradox -->
+  <section class="np ink" aria-labelledby="npT">
+    <div class="wrap">
+      <p class="k mono">06 — The great Nordic paradox</p>
+      <h2 class="h2" id="npT">The Nordics win only when they are the <u>exception</u>.</h2>
+      <div class="flips">
+        <button type="button" class="flip"><span class="flip__f">Democratic</span><span class="flip__b">in a world that turns <b>autocratic</b></span></button>
+        <button type="button" class="flip"><span class="flip__f">Stable</span><span class="flip__b">in a world that turns <b>chaotic</b></span></button>
+        <button type="button" class="flip"><span class="flip__f">United</span><span class="flip__b">in a world that turns <b>fragmented</b></span></button>
+      </div>
+      <p class="mono flips__h">Touch each word</p>
+      <p class="lead lead--ink">If the Nordics made the whole world as peaceful as they are, they would erase the very conditions of their success. That is not a scandal. It is a story that no longer matches the facts, and the world is starting to notice.</p>
+    </div>
+  </section>
+
+  <!-- 7. end -->
+  <section class="end" aria-labelledby="endT">
+    <div class="wrap">
+      <h2 class="end__t" id="endT">Time to rethink the idea of the Nordics.</h2>
+      <p class="end__q">The mistake is not in dreaming. It is in refusing to let the dream evolve.</p>
+      <div class="end__ctas">
+        <a class="btn btn--ink" href="mailto:admin@fronttier.io?subject=Arcticonomics">Bring Arcticonomics to your room →</a>
+        <a class="btn" href="https://fronttier.io">Explore FRONTTIER ↗</a>
+      </div>
+    </div>
+    <footer class="foot mono">
+      <span>Arcticonomics · first presented at Arctic Circle 2025 by Virginia E. Vegas</span>
+      <span>Data: FRED, WTI spot (WTISPLC), deflated by US CPI-U to Oct 2026 dollars</span>
+      <a href="https://fronttier.io">A FRONTTIER AS project ↗</a>
+    </footer>
+  </section>
+
+  <script src="../data.js?v=1"></script>
+  <script src="app.js?v=2" defer></script>
+</body>
+</html>
